@@ -1,10 +1,10 @@
 ##################################
-# Name: 
-# Email: justinw@codesphere.com
+# Name: UNSW-CSESoc .zshrc file 
+# Email: csesoc.sysadmin@csesoc.unsw.edu.au
 # Date Created: 23/5/2012
-# Date Modified: 23/5/2012
-# Title: .bashrc
-# Description: bash shortcuts                                         
+# Date Modified: 24/5/2012
+# Title: .zshrc
+# Description: zsh config                                         
 ##################################
 
 
@@ -30,9 +30,6 @@ at_normal=%{$'\e[0m'%}
 # simple prompt
 export PS1="${fg_lgreen}~${fg_purple}>${at_normal} "
 
-# Editor
-
-export $EDITOR='vim'
 
 # for black backgrounds ( dark blue is hard to see )
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -45,22 +42,21 @@ alias ..='cd ../'
 alias ...='cd ../..'
 
 #vim alias
-alias vim='v'
-
+alias v='vim'
 
 # git aliases
 alias gs='git status'
-alias gpush='git push -u origin'
+alias gp='git push -u origin'
 # halts tracking of deleted files and does the normal add. 
 alias ga='git add -u'
-alias gp='git pull'
-alias ggive='git -am commit'
+alias gl='git pull'
+alias gc='git  commit -avm'
 
 
 # git checkout 
 # usage: gc [whatever branch] 
 # if you want master leave blank
-function gc {
+function gout {
   if [ -z "$1" ]; then
       git checkout master
   else
